@@ -88,7 +88,6 @@ score();
 if(ball.y > pad1Pos && ball.y < pad1Pos + pad1Length && ball.x < 40 ) {
 	print("Hit Paddle 1");
 	ball.speed.x *= -1;
-	
 }
 
 //Player 1 contact edge
