@@ -1,3 +1,8 @@
+//---------------------------//
+//  Initialize Game Objects  //
+//---------------------------//
+
+
 //Ball Physics
 var ball = {
 	x: 500,
@@ -7,6 +12,11 @@ var ball = {
 		y: 5,
 	},
 };
+
+//Ball 1
+var ball1 = function() {
+	ellipse(ball.x, ball.y, 20, 20);
+}
 
 //Player 1 Paddle
 var pad1Score = 0;
@@ -24,10 +34,7 @@ var pad2 = function() {
 	rect(windowWidth - 30, pad2Pos, 20, pad2Length);
 }
 
-//Ball 1
-var ball1 = function() {
-	ellipse(ball.x, ball.y, 20, 20);
-}
+
 
 //-------------------//
 //  Start Game Loop  //
@@ -45,7 +52,7 @@ pad1();
 pad2();
 ball1();
 
-//Player Move
+//Player 1 Move
 
 if (keyIsDown(87)) {
 	pad1Pos -= 10;
@@ -57,6 +64,8 @@ if (keyIsDown(83)) {
 	print("p5 keyCode: " + keyCode);
 }
 
+
+//Player 2 Move
 if (keyIsDown(UP_ARROW)) {
 	pad2Pos -= 10;
 	print("p5 keyCode: " + keyCode);
